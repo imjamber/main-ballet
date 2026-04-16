@@ -1,37 +1,25 @@
 import type { Metadata } from "next"
 import SectionHeading from "@/components/ui/SectionHeading"
 import AnimatedSection from "@/components/ui/AnimatedSection"
-import { FEES_PDFS } from "@/lib/constants"
+import { FEES, FEES_PDFS } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Fees | Fitchett Proll Dance",
   description: "Class fees and payment information for Sandham Fitchett Performing Arts.",
 }
 
-const feeInfo = [
-  {
-    heading: "Payable a Term in Advance",
-    body: "Fees are due at the start of each term, regardless of lessons attended during that term.",
-  },
-  {
-    heading: "10 Weeks per Term",
-    body: "Each term is 10 weeks long, with 3 terms per academic year.",
-  },
-  {
-    heading: "Multiple Class Discounts",
-    body: "Discounts are available for students attending multiple classes. Please contact us for details.",
-  },
-  {
-    heading: "Payment Methods",
-    body: "Fees can be paid in person at reception or by bank transfer. Please contact us to arrange payment.",
-  },
-]
+const COLUMNS = [
+  { key: "ballet",       label: "Ballet" },
+  { key: "tap",          label: "Tap" },
+  { key: "modern",       label: "Modern / Street" },
+  { key: "contemporary", label: "Contemporary" },
+  { key: "acrobatic",    label: "Acrobatic" },
+] as const
 
 export default function FeesPage() {
   return (
     <div className="min-h-screen bg-cream">
 
-      {/* Banner */}
       <div className="bg-ink pt-32 pb-20 px-6 md:px-10">
         <div className="max-w-screen-xl mx-auto">
           <SectionHeading
@@ -44,59 +32,85 @@ export default function FeesPage() {
         </div>
       </div>
 
-      {/* PDF download */}
+      {/* Fee table */}
       <section className="py-24 px-6 md:px-10">
-        <div className="max-w-3xl mx-auto flex flex-col gap-8">
-          <p className="font-sans text-stone leading-relaxed">
-            The current fee schedule is available as a PDF below. Fees vary by discipline and level — please download for full details.
-          </p>
+        <div className="max-w-screen-xl mx-auto flex flex-col gap-10">
 
-          {FEES_PDFS.map((pdf, i) => (
-            <AnimatedSection key={pdf.label} delay={i * 0.08}>
-              <a
-                href={pdf.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-6 p-7 bg-mist border border-transparent hover:border-rose hover:bg-blush transition-all duration-300"
-              >
-                <div className="flex items-center gap-5">
-                  <div className="w-10 h-10 bg-rose/10 group-hover:bg-rose/20 rounded flex items-center justify-center shrink-0 transition-colors">
-                    <svg className="w-5 h-5 text-rose" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <span className="font-sans text-ink text-sm group-hover:text-rose transition-colors">{pdf.label}</span>
-                </div>
-                <div className="flex items-center gap-2 shrink-0">
-                  <span className="font-sans text-stone text-xs tracking-widest uppercase hidden sm:block">PDF</span>
-                  <svg className="w-4 h-4 text-stone group-hover:text-rose transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                  </svg>
-                </div>
-              </a>
-            </AnimatedSection>
+          <AnimatedSection>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm font-sans border-collapse min-w-[640px]">
+                <thead>
+                  <tr className="border-b-2 border-ink/10">
+                    <th className="text-left py-4 pr-6 font-sans text-xs tracking-widest uppercase text-champagne">Level</th>
+                    {COLUMNS.map((col) => (
+                      <th key={col.key} className="text-center py-4 px-3 font-sans text-xs tracking-widest uppercase text-champagne">
+                        {col.label}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {FEES.rows.map((row, i) => (
+                    <tr key={i} className={`border-b border-ink/6 ${i % 2 === 0 ? "" : "bg-mist/40"} hover:bg-blush transition-colors`}>
+                      <td className="py-4 pr-6 font-serif text-ink text-base">{row.level}</td>
+                      {COLUMNS.map((col) => {
+                        const val = (row as Record<string, string>)[col.key]
+                        return (
+                          <td key={col.key} className={`py-4 px-3 text-center ${val === "–" ? "text-stone/30" : "text-rose font-medium"}`}>
+                            {val}
+                          </td>
+                        )
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </AnimatedSection>
+
+          <div className="flex flex-col gap-2 border-l-2 border-rose/30 pl-5">
+            <p className="font-sans text-stone text-sm leading-relaxed">{FEES.note}</p>
+            {FEES.contactNote && (
+              <p className="font-sans text-stone/70 text-sm leading-relaxed">{FEES.contactNote}</p>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Info boxes */}
+      <section className="bg-mist py-16 px-6 md:px-10">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+          {[
+            { heading: "3 Terms",      body: "The year is divided into three terms of 10 weeks each." },
+            { heading: "Term in Advance", body: "Fees are due at the start of each term regardless of lessons attended." },
+            { heading: "All Levels",   body: "Fees vary by discipline and level — see the table above for full details." },
+          ].map((item) => (
+            <div key={item.heading} className="flex flex-col gap-2 items-center">
+              <span className="font-serif text-2xl text-rose">{item.heading}</span>
+              <p className="font-sans text-stone text-sm leading-relaxed">{item.body}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* Fee info grid */}
-      <section className="bg-mist py-24 px-6 md:px-10">
-        <div className="max-w-screen-xl mx-auto flex flex-col gap-12">
-          <SectionHeading
-            eyebrow="How It Works"
-            title="Fee Information"
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {feeInfo.map((item, i) => (
-              <AnimatedSection key={item.heading} delay={i * 0.08}>
-                <div className="bg-cream p-7 flex flex-col gap-3 border-l-2 border-rose/40 hover:border-rose transition-colors">
-                  <span className="font-sans text-champagne text-xs tracking-widest uppercase">{item.heading}</span>
-                  <p className="font-sans text-stone text-sm leading-relaxed">{item.body}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
+      {/* PDF */}
+      <section className="py-12 px-6 md:px-10">
+        <div className="max-w-screen-xl mx-auto flex flex-col gap-3">
+          <p className="font-sans text-xs tracking-[0.28em] uppercase text-champagne mb-1">Official PDF</p>
+          {FEES_PDFS.map((pdf) => (
+            <a
+              key={pdf.label}
+              href={pdf.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-sans text-sm text-stone hover:text-rose transition-colors"
+            >
+              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              {pdf.label}
+            </a>
+          ))}
         </div>
       </section>
     </div>

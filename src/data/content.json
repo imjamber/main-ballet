@@ -1,0 +1,135 @@
+{
+  "siteInfo": {
+    "schoolName": "Fitchett Proll Dance",
+    "schoolFullName": "Sandham Fitchett Performing Arts",
+    "phone": "07770 233007",
+    "email": "info@fitchettproll.co.uk",
+    "weekdayHours": "Monday – Friday: 8:00am – 8:00pm",
+    "saturdayHours": "Saturday: 8:00am – 4:00pm",
+    "tagline": "Preston's Premier Dance School — Established 1946"
+  },
+  "disciplines": [
+    { "name": "Classical Ballet", "age": "All ages", "description": "RAD-affiliated syllabus training from absolute beginner through to vocational level. A foundation for all dance." },
+    { "name": "Pointes", "age": "Advanced students", "description": "Pointe work for students who have developed the strength and technique to progress safely under expert guidance." },
+    { "name": "Tap", "age": "All ages", "description": "Rhythm, coordination, and that unmistakeable sound. Classes for all levels from beginner upwards." },
+    { "name": "Modern Jazz", "age": "5 years+", "description": "Contemporary movement, performance energy, and style — a hugely popular class across all our studios." },
+    { "name": "Street Dance", "age": "5 years+", "description": "Urban movement vocabulary in an energetic and enjoyable class environment. Great for confidence and coordination." },
+    { "name": "Contemporary Dance", "age": "10 years+", "description": "Expressive, floor-based, and technically demanding. BTDA-accredited examinations available." },
+    { "name": "Classical Acrobatic Dance", "age": "All ages", "description": "BTDA-accredited acrobatic technique combined with classical training. A unique and exciting discipline." },
+    { "name": "Disco", "age": "5 years+", "description": "Fun, energetic classes combining popular music with dance technique. A favourite with younger students." }
+  ],
+  "adultDisciplines": [
+    { "name": "Adult Ballet", "description": "Classical ballet for adult beginners and returners. Improve flexibility, posture, and coordination while enjoying beautiful music." },
+    { "name": "Silver Swans®", "description": "RAD Silver Swans® classes designed specifically for the over-55s. Improve bone density, balance, and wellbeing — and make new friends." },
+    { "name": "Adult Tap", "description": "Fun, sociable, and surprisingly good exercise. Come along and give it a try — no experience necessary." }
+  ],
+  "studios": [
+    { "name": "Preston",               "url": "https://www.fitchettproll.co.uk/",           "day": "Saturdays" },
+    { "name": "Fulwood",               "url": "https://www.danceschoolfulwood.co.uk/",      "day": "Mondays" },
+    { "name": "Cottam",                "url": "https://www.danceschoolcottam.co.uk/",       "day": "Tuesdays" },
+    { "name": "Woodplumpton",          "url": null,                                          "day": "Tuesdays" },
+    { "name": "Blackburn with Darwen", "url": "https://www.danceschoolblackburn.co.uk/",    "day": "Wednesdays" },
+    { "name": "Longton",               "url": "https://www.danceschoollongton.co.uk/",      "day": "Wednesdays" },
+    { "name": "Bamber Bridge",         "url": "https://www.danceschoolbamberbridge.co.uk/", "day": "Thursdays" },
+    { "name": "Kirkham",               "url": "https://www.danceschoolkirkham.co.uk/",      "day": "Thursdays & Fridays" },
+    { "name": "Wesham",                "url": "https://www.danceschoolkirkham.co.uk/",      "day": "Thursdays & Fridays" }
+  ],
+  "faculty": [
+    { "name": "Martine Proll",    "role": "Principal" },
+    { "name": "Natalie Strong",   "role": "Teacher" },
+    { "name": "Katy Foy",         "role": "Teacher" },
+    { "name": "Melissa Howard",   "role": "Teacher" },
+    { "name": "Lara Malaney",     "role": "Teacher" },
+    { "name": "Emma Hunt",        "role": "Teacher" },
+    { "name": "Tia Carrie Algar", "role": "Teacher" },
+    { "name": "Sarah Gaul",       "role": "Teacher" },
+    { "name": "Katie McDougall",  "role": "Teacher" },
+    { "name": "Niamh Tierney",    "role": "Teacher" },
+    { "name": "Caitlin Tierney",  "role": "Teacher" },
+    { "name": "Hannah Whalley",   "role": "Teacher" },
+    { "name": "Amelia Seddon",    "role": "Teacher" }
+  ],
+  "guestTeachers": ["Steve Chesters", "Carrie Ellis", "Prabhavathy Appaji"],
+  "receptionStaff": ["Mrs L Malaney", "Mrs Bamber", "Mrs Walker"],
+  "whyUs": [
+    { "heading": "Established 1946", "body": "Nearly 80 years of dance education across Lancashire — a genuine institution with a proud legacy." },
+    { "heading": "100% BTDA Pass Rate", "body": "Every student who enters examinations with the British Theatre Dance Association achieves their grade." },
+    { "heading": "Third-Generation School", "body": "From Margaret Sandham to Heather Fitchett to Martine Proll and Miss Melissa — excellence runs in the family." },
+    { "heading": "DBS-Checked Staff", "body": "All teachers and parent helpers are DBS checked regularly. Safeguarding is at the heart of everything we do." },
+    { "heading": "Free Parking", "body": "Free parking is available at every one of our nine studios across Lancashire." },
+    { "heading": "BTDA & RAD Registered", "body": "Fully registered with the British Theatre Dance Association and Royal Academy of Dance. Vocational and GCSE-equivalent qualifications offered." }
+  ],
+  "timetable": {
+    "note": "Timetables are updated each term. If you can't find your class or need more information, please contact us.",
+    "sessions": [
+      { "day": "Saturday", "time": "8:00",  "studio": "Studio 1 (Preston)", "class": "Senior Ballet",    "ageGroup": "Senior" },
+      { "day": "Saturday", "time": "8:00",  "studio": "Studio 2 (Preston)", "class": "Senior Ballet",    "ageGroup": "Senior" },
+      { "day": "Saturday", "time": "8:00",  "studio": "Studio 3 (Preston)", "class": "Senior Ballet",    "ageGroup": "Senior" },
+      { "day": "Saturday", "time": "8:40",  "studio": "Studio 1 (Preston)", "class": "Modern Grade 6",   "ageGroup": "Senior" },
+      { "day": "Saturday", "time": "9:00",  "studio": "Studio 1 (Preston)", "class": "Ballet Grade 1",   "ageGroup": "Ages 5–7" },
+      { "day": "Saturday", "time": "9:00",  "studio": "Studio 2 (Preston)", "class": "Ballet Grade 2",   "ageGroup": "Ages 7–9" },
+      { "day": "Saturday", "time": "9:00",  "studio": "Studio 3 (Preston)", "class": "Ballet Grade 3",   "ageGroup": "Ages 9–11" },
+      { "day": "Saturday", "time": "9:30",  "studio": "Studio 1 (Preston)", "class": "Modern Grade 5",   "ageGroup": "Ages 11+" },
+      { "day": "Saturday", "time": "9:30",  "studio": "Studio 2 (Preston)", "class": "Modern Grade 2",   "ageGroup": "Ages 7–9" },
+      { "day": "Saturday", "time": "9:30",  "studio": "Studio 3 (Preston)", "class": "Modern Prep",      "ageGroup": "Ages 4–5" },
+      { "day": "Saturday", "time": "9:30",  "studio": "Activities (Preston)", "class": "Adult Ballet",   "ageGroup": "Adult" },
+      { "day": "Saturday", "time": "10:00", "studio": "Studio 1 (Preston)", "class": "Tap Grade 3",      "ageGroup": "Ages 9–11" },
+      { "day": "Saturday", "time": "10:00", "studio": "Studio 2 (Preston)", "class": "Tap Grade 1",      "ageGroup": "Ages 5–7" },
+      { "day": "Saturday", "time": "10:00", "studio": "Studio 3 (Preston)", "class": "Baby Ballet",      "ageGroup": "18m – 3 yrs" },
+      { "day": "Saturday", "time": "10:30", "studio": "Studio 1 (Preston)", "class": "Ballet Grade 4",   "ageGroup": "Ages 11–13" },
+      { "day": "Saturday", "time": "10:30", "studio": "Studio 2 (Preston)", "class": "Tap Grade 2",      "ageGroup": "Ages 7–9" },
+      { "day": "Saturday", "time": "10:30", "studio": "Studio 3 (Preston)", "class": "Primary Ballet",   "ageGroup": "Ages 3–5" },
+      { "day": "Saturday", "time": "11:00", "studio": "Activities (Preston)", "class": "Adult Tap",      "ageGroup": "Adult" },
+      { "day": "Monday",   "time": "4:30",  "studio": "Fulwood",             "class": "Primary Ballet",  "ageGroup": "Ages 3–5" },
+      { "day": "Monday",   "time": "5:00",  "studio": "Fulwood",             "class": "Ballet Grade 1",  "ageGroup": "Ages 5–7" },
+      { "day": "Monday",   "time": "5:30",  "studio": "Fulwood",             "class": "Modern Jazz",     "ageGroup": "Ages 7+" },
+      { "day": "Monday",   "time": "6:00",  "studio": "Fulwood",             "class": "Ballet Grade 2",  "ageGroup": "Ages 7–9" },
+      { "day": "Tuesday",  "time": "4:30",  "studio": "Cottam",              "class": "Baby Ballet",     "ageGroup": "18m – 3 yrs" },
+      { "day": "Tuesday",  "time": "5:00",  "studio": "Cottam",              "class": "Primary Ballet",  "ageGroup": "Ages 3–5" },
+      { "day": "Tuesday",  "time": "5:30",  "studio": "Cottam",              "class": "Tap",             "ageGroup": "Ages 5+" },
+      { "day": "Wednesday","time": "4:30",  "studio": "Blackburn",           "class": "Primary Ballet",  "ageGroup": "Ages 3–5" },
+      { "day": "Wednesday","time": "5:00",  "studio": "Blackburn",           "class": "Ballet Grade 1",  "ageGroup": "Ages 5–7" },
+      { "day": "Wednesday","time": "4:30",  "studio": "Longton",             "class": "Baby Ballet",     "ageGroup": "18m – 3 yrs" },
+      { "day": "Wednesday","time": "5:00",  "studio": "Longton",             "class": "Modern Jazz",     "ageGroup": "Ages 5+" },
+      { "day": "Thursday", "time": "4:30",  "studio": "Bamber Bridge",       "class": "Primary Ballet",  "ageGroup": "Ages 3–5" },
+      { "day": "Thursday", "time": "5:00",  "studio": "Bamber Bridge",       "class": "Ballet Grade 1",  "ageGroup": "Ages 5–7" },
+      { "day": "Thursday", "time": "4:30",  "studio": "Kirkham",             "class": "Baby Ballet",     "ageGroup": "18m – 3 yrs" },
+      { "day": "Thursday", "time": "5:00",  "studio": "Kirkham",             "class": "Tap",             "ageGroup": "Ages 5+" },
+      { "day": "Friday",   "time": "4:30",  "studio": "Kirkham",             "class": "Street Dance",    "ageGroup": "Ages 7+" },
+      { "day": "Friday",   "time": "5:00",  "studio": "Kirkham",             "class": "Contemporary",    "ageGroup": "Ages 10+" }
+    ]
+  },
+  "fees": {
+    "note": "Fees are payable a term in advance. Each term is 10 weeks. There are 3 terms per year. Fees below are per class, per term.",
+    "contactNote": "For sibling discounts or payment plans, please contact us directly.",
+    "rows": [
+      { "level": "Baby Ballet (18m – 3 yrs)", "ballet": "£68", "tap": "–",   "modern": "–",   "contemporary": "–",   "acrobatic": "–" },
+      { "level": "Primary (3 – 5 yrs)",       "ballet": "£72", "tap": "£72", "modern": "£72", "contemporary": "–",   "acrobatic": "–" },
+      { "level": "Prep / Grade 1",            "ballet": "£76", "tap": "£76", "modern": "£76", "contemporary": "–",   "acrobatic": "£78" },
+      { "level": "Grade 2 / 3",              "ballet": "£76", "tap": "£76", "modern": "£76", "contemporary": "£76", "acrobatic": "£78" },
+      { "level": "Grade 4 / 5",              "ballet": "£80", "tap": "£80", "modern": "£80", "contemporary": "£80", "acrobatic": "£82" },
+      { "level": "Grade 6 / 7 / 8",          "ballet": "£84", "tap": "£84", "modern": "£84", "contemporary": "£84", "acrobatic": "£86" },
+      { "level": "Vocational",               "ballet": "£90", "tap": "£90", "modern": "£90", "contemporary": "£90", "acrobatic": "–" },
+      { "level": "Adult",                    "ballet": "£72", "tap": "£72", "modern": "–",   "contemporary": "–",   "acrobatic": "–" }
+    ]
+  },
+  "uniform": [
+    { "category": "Ballet (Beginners)",  "items": ["Pink regulation leotard", "Pink ballet tights", "Pink ballet shoes", "Pink crossover cardigan (optional)"] },
+    { "category": "Ballet (Junior)",     "items": ["Regulation leotard", "Ballet tights", "Ballet shoes", "RAD-approved uniform where applicable"] },
+    { "category": "Ballet (Senior)",     "items": ["Black leotard", "Black tights or footless tights", "Ballet shoes or pointe shoes"] },
+    { "category": "Tap",                 "items": ["Black leotard", "Tap shoes (white Velcro for young children)", "Black skirt (juniors)"] },
+    { "category": "Modern / Street",     "items": ["Black leotard", "Black jazz trousers or shorts", "Jazz shoes or bare feet"] },
+    { "category": "Accessories",         "items": ["School drawstring bag", "Junior personalised hoodie", "Senior personalised hoodie"] }
+  ],
+  "timetablePdfs": [
+    { "label": "Show Timetable — from Saturday 31st January 2026", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2026/01/Show-Timetable-from-31st-January-2026.pdf" },
+    { "label": "Weekday Timetable — Spring 2026 (Mon–Thu)",        "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2026/01/Week-Day-Spring-2026.pdf" },
+    { "label": "Saturday Timetable — Autumn Term 2025",            "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2025/07/SATURDAY-Timetable-Autumn-Term-2025-UPDATED-.pdf" }
+  ],
+  "feesPdfs": [
+    { "label": "Class Fees — September 2024", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2024/09/Class-Fees-September-2024-2.pdf" }
+  ],
+  "uniformPdfs": [
+    { "label": "Uniform Price List — September 2024", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2024/09/Fitchett-Proll-Uniform-28th-September-2024.pdf" }
+  ]
+}
