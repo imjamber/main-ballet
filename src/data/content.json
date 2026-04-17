@@ -120,16 +120,5 @@
     { "category": "Tap",                 "items": ["Black leotard", "Tap shoes (white Velcro for young children)", "Black skirt (juniors)"] },
     { "category": "Modern / Street",     "items": ["Black leotard", "Black jazz trousers or shorts", "Jazz shoes or bare feet"] },
     { "category": "Accessories",         "items": ["School drawstring bag", "Junior personalised hoodie", "Senior personalised hoodie"] }
-  ],
-  "timetablePdfs": [
-    { "label": "Show Timetable — from Saturday 31st January 2026", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2026/01/Show-Timetable-from-31st-January-2026.pdf" },
-    { "label": "Weekday Timetable — Spring 2026 (Mon–Thu)",        "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2026/01/Week-Day-Spring-2026.pdf" },
-    { "label": "Saturday Timetable — Autumn Term 2025",            "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2025/07/SATURDAY-Timetable-Autumn-Term-2025-UPDATED-.pdf" }
-  ],
-  "feesPdfs": [
-    { "label": "Class Fees — September 2024", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2024/09/Class-Fees-September-2024-2.pdf" }
-  ],
-  "uniformPdfs": [
-    { "label": "Uniform Price List — September 2024", "url": "https://www.fitchettproll.co.uk/wp-content/uploads/2024/09/Fitchett-Proll-Uniform-28th-September-2024.pdf" }
   ]
 }

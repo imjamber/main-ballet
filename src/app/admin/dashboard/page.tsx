@@ -24,9 +24,6 @@ interface Content {
   timetable: { note: string; sessions: TimetableSession[] }
   fees: { note: string; contactNote: string; rows: FeeRow[] }
   uniform: UniformCat[]
-  timetablePdfs: { label: string; url: string }[]
-  feesPdfs: { label: string; url: string }[]
-  uniformPdfs: { label: string; url: string }[]
 }
 
 type Tab = "site" | "classes" | "adult" | "studios" | "faculty" | "whyus" | "timetable" | "fees" | "uniform"
@@ -284,7 +281,7 @@ export default function AdminDashboard() {
                   .map((s, i) => {
                     const realIdx = content.timetable.sessions.indexOf(s)
                     return (
-                      <div key={i} className="grid grid-cols-[100px_90px_1fr_1fr_1fr_32px] gap-2 items-center bg-cream/5 border border-cream/8 px-2 py-1.5">
+                      <div key={realIdx} className="grid grid-cols-[100px_90px_1fr_1fr_1fr_32px] gap-2 items-center bg-cream/5 border border-cream/8 px-2 py-1.5">
                         <select value={s.day} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, day: e.target.value } : x) } }))} className="bg-ink border-none text-cream text-xs focus:outline-none">
                           {DAY_ORDER.map(d => <option key={d}>{d}</option>)}
                         </select>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import SectionHeading from "@/components/ui/SectionHeading"
 import AnimatedSection from "@/components/ui/AnimatedSection"
-import { FEES, FEES_PDFS } from "@/lib/constants"
+import { FEES } from "@/lib/constants"
 
 export const metadata: Metadata = {
   title: "Fees | Fitchett Proll Dance",
@@ -93,26 +93,6 @@ export default function FeesPage() {
         </div>
       </section>
 
-      {/* PDF */}
-      <section className="py-12 px-6 md:px-10">
-        <div className="max-w-screen-xl mx-auto flex flex-col gap-3">
-          <p className="font-sans text-xs tracking-[0.28em] uppercase text-champagne mb-1">Official PDF</p>
-          {FEES_PDFS.map((pdf) => (
-            <a
-              key={pdf.label}
-              href={pdf.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-sans text-sm text-stone hover:text-rose transition-colors"
-            >
-              <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              {pdf.label}
-            </a>
-          ))}
-        </div>
-      </section>
     </div>
   )
 }

@@ -34,6 +34,3 @@ export const WHY_US            = data.whyUs
 export const TIMETABLE         = data.timetable
 export const FEES              = data.fees
 export const UNIFORM           = data.uniform
-export const TIMETABLE_PDFS    = data.timetablePdfs
-export const FEES_PDFS         = data.feesPdfs
-export const UNIFORM_PDFS      = data.uniformPdfs
