@@ -276,23 +276,18 @@ export default function AdminDashboard() {
                     <span key={h} className="font-sans text-xs uppercase tracking-widest text-cream/30">{h}</span>
                   ))}
                 </div>
-                {[...content.timetable.sessions]
-                  .sort((a, b) => DAY_ORDER.indexOf(a.day) - DAY_ORDER.indexOf(b.day) || a.time.localeCompare(b.time))
-                  .map((s, i) => {
-                    const realIdx = content.timetable.sessions.indexOf(s)
-                    return (
-                      <div key={realIdx} className="grid grid-cols-[100px_90px_1fr_1fr_1fr_32px] gap-2 items-center bg-cream/5 border border-cream/8 px-2 py-1.5">
-                        <select value={s.day} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, day: e.target.value } : x) } }))} className="bg-ink border-none text-cream text-xs focus:outline-none">
-                          {DAY_ORDER.map(d => <option key={d}>{d}</option>)}
-                        </select>
-                        <input value={s.time} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, time: e.target.value } : x) } }))} placeholder="9:00" className="bg-transparent text-cream text-sm focus:outline-none font-mono" />
-                        <input value={s.studio} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, studio: e.target.value } : x) } }))} className="bg-transparent text-cream text-sm focus:outline-none" />
-                        <input value={s.class} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, class: e.target.value } : x) } }))} className="bg-transparent text-cream text-sm focus:outline-none" />
-                        <input value={s.ageGroup} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === realIdx ? { ...x, ageGroup: e.target.value } : x) } }))} className="bg-transparent text-cream/60 text-xs focus:outline-none" />
-                        <RemoveBtn onClick={() => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.filter((_, j) => j !== realIdx) } }))} />
-                      </div>
-                    )
-                  })}
+                {content.timetable.sessions.map((s, i) => (
+                  <div key={i} className="grid grid-cols-[100px_90px_1fr_1fr_1fr_32px] gap-2 items-center bg-cream/5 border border-cream/8 px-2 py-1.5">
+                    <select value={s.day} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === i ? { ...x, day: e.target.value } : x) } }))} className="bg-ink border-none text-cream text-xs focus:outline-none">
+                      {DAY_ORDER.map(d => <option key={d}>{d}</option>)}
+                    </select>
+                    <input value={s.time} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === i ? { ...x, time: e.target.value } : x) } }))} placeholder="9:00" className="bg-transparent text-cream text-sm focus:outline-none font-mono" />
+                    <input value={s.studio} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === i ? { ...x, studio: e.target.value } : x) } }))} className="bg-transparent text-cream text-sm focus:outline-none" />
+                    <input value={s.class} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === i ? { ...x, class: e.target.value } : x) } }))} className="bg-transparent text-cream text-sm focus:outline-none" />
+                    <input value={s.ageGroup} onChange={e => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.map((x, j) => j === i ? { ...x, ageGroup: e.target.value } : x) } }))} className="bg-transparent text-cream/60 text-xs focus:outline-none" />
+                    <RemoveBtn onClick={() => update(c => ({ ...c, timetable: { ...c.timetable, sessions: c.timetable.sessions.filter((_, j) => j !== i) } }))} />
+                  </div>
+                ))}
               </div>
               <AddBtn onClick={() => update(c => ({ ...c, timetable: { ...c.timetable, sessions: [...c.timetable.sessions, { day: "Saturday", time: "9:00", studio: "", class: "", ageGroup: "" }] } }))} label="Add Session" />
             </Section>
